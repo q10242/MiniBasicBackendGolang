@@ -27,9 +27,6 @@ func main() {
 	// 初始化伺服器
 	srv := base.NewServer(":8080")
 
-	// 添加預設中介軟體
-	srv.AddMiddleware(base.LoggingMiddleware)
-
 	// 註冊客製化路由
 	customRouter := &CustomRouter{}
 	srv.RegisterCustomRoutes(customRouter)
